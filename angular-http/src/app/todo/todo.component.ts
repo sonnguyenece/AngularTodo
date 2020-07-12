@@ -26,13 +26,13 @@ export class TodoComponent implements OnInit {
   }
 
   toggleTodo(i) {
-    const todo=this.todoList[i];
-    const todoData= {
+    const todo = this.todoList[i];
+    const todoData = {
       ...todo,
       complete: !todo.completed
     };
     this.todoService.updateTodo(todoData).subscribe(next => {
-      this.todoList[i].completed = next.completed;
+      this.todoList[i].completed = !this.todoList[i].completed;
     })
   }
 

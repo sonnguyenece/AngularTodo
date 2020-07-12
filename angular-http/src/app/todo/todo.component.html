@@ -6,7 +6,7 @@
 <ul>
   <li *ngFor="let todo of todoList;index as i"
   [class.completed]="todo.completed">
-    <div (click)="toggleTodo(i)">
+    <div (click)="toggleTodo(i)" >
       Id: {{todo.id}}
       <br>
       {{todo.title}}
